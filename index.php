@@ -1,7 +1,7 @@
 
 <?php
 include 'config/connexion.php';
-include 'views/header.php';
+include 'layout/header.php';
 
 $req = $bdd->query("SELECT COUNT(*) as t FROM donneur");
 $nb_donneurs = $req->fetch(PDO::FETCH_ASSOC)['t'];
@@ -390,4 +390,4 @@ $urgences = $req->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<?php include 'views/footer.php'; ?>
+<?php include 'layout/footer.php'; ?>
