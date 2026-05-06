@@ -1,11 +1,9 @@
 <?php 
 try {
-    $host = 'sql108.byethost6.com';
-    $db   = 'b6_41848940_bloodbridge';
-    $user = 'b6_41848940';
-    $pass = 'Khoukha123'; // <--- Vérifie bien celui-ci
 
-    $bdd = new PDO("mysql:host=$host;port=3306;dbname=$db;charset=utf8", $user, $pass);
+    $bdd = new PDO('mysql:host=sql108.byethost6.com;dbname=b6_41848940_bloodbridge;charset=utf8',
+        'b6_41848940',
+        'Khoukha123');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     // Si on arrive ici, c'est que ça marche !
